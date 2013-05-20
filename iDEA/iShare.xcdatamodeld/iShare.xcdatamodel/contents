@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12D78" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Incident" representedClassName="Incident" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="amountSeized" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="arrested" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="consentToSearch" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="createDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="drivenBy" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="eventDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="eventType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="modifyDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="number" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="numberOfSubjects" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="otherEventType" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uploadDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vehicleSeized" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="pictures" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Pictures" inverseName="incident" inverseEntity="Pictures" syncable="YES"/>
+    </entity>
+    <entity name="LocalVarables" representedClassName="LocalVarables" syncable="YES">
+        <attribute name="agency" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="enablePasscode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="leo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="passcode" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uploadEmail" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="Pictures" representedClassName="Pictures" syncable="YES">
+        <attribute name="descPhoto" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="idPhoto" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="pictureNumber" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="pictureURL" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="incident" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Incident" inverseName="pictures" inverseEntity="Incident" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Incident" positionX="241" positionY="144" width="128" height="328"/>
+        <element name="LocalVarables" positionX="-0" positionY="-0" width="128" height="118"/>
+        <element name="Pictures" positionX="-342" positionY="170" width="128" height="118"/>
+    </elements>
+</model>
